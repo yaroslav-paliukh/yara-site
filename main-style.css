@@ -357,12 +357,12 @@ footer .social{
 	/*overflow: hidden;*/
 }
 
- .my-slides{
+ .mySlides{
  	position: relative;
  	height: 544px;
  }
 
-.my-slides:before{
+.mySlides:before{
 	position: absolute;
 	content: "";
 	width: 1040px;
@@ -378,7 +378,7 @@ footer .social{
 	z-index: 4;	
 }
 
-.my-slides .images{
+.mySlides .images{
 	position: absolute;
 	right: 0;
 	max-width: 1040px;
@@ -567,72 +567,15 @@ footer .social{
 }
 
 
+
+
+
+
+
+
+
+
 /*
-
-.dot{
-	cursor: pointer;
-	height: 77px;
-	width: 43px;
-	margin: 0 5px;
-	padding-top: 30px;
-	display: inline-block;
-	color: #596788;
-}
-
-.dot p{
-	margin-top: -6px;
-}
-
-.active, .dot:hover{
-	color: #fff;
-	
-}
-
-.dot:active{
-	color: #0060dd;
-}
-
-
-.hover-back{
-	cursor: pointer;
-	height: 6px;
-	width: 43px;
-	margin: 30px 5px 0 5px;
-	display: inline-block;
-	background-color: #070f1c;
-	
-}
-
-.hover-back:hover{
-	height: 77px;
-	background-color: #070f1c;
-	border-radius: 0 0 4px 4px;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #slider{
 	width: 1040px;
@@ -674,5 +617,5 @@ footer .social{
 #overflow{
 	overflow: hidden;
 }
-
+*/
 /* slider ends*/
