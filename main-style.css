@@ -107,6 +107,21 @@ h1, h2, h3,
 
 .fronton{
 	min-height: 960px;
+	position: relative;
+}
+
+.fronton::after,
+.detile::after,
+.works-block::after{
+	display: block;
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 56px;
+	background-color: #0054ff;
+	left: 50%;
+	bottom: -28px;
+	z-index: 10;
 }
 
 h2{
@@ -307,6 +322,7 @@ h2{
 	min-height: 10px;
 	width: 100%;
 	padding: 115px 0;
+	position: relative;
 }
 
 
@@ -316,10 +332,7 @@ h2{
 	transition: 0.5s ease;
 	-webkit-transition: 0.5s ease;     
 }
-
 /*animation ends*/
-
-
 
 
 
@@ -468,17 +481,17 @@ h2{
 	z-index: 1;
 }
 
-/*.square-line::before,
-footer h3::before{
-	display: inline-block;
+.square-line::before{
+	display: block;
 	position: absolute;
-	content: ",";
-	font-size: 470px;
-	font-family: 'Yeseva One';
-	top: -200px;
-	left: 40px;
-	color: rgba(2, 6, 12, 0.4);
-}*/
+	content: "";
+	width: 180px;
+	height: 120px;
+	background: rgba(17, 23, 35, 0) url(img/svg/coma-01-01.svg) 50% no-repeat;
+	z-index: 0;
+	top: 40%;
+	opacity: 0.6;
+}
 
 .dot-wrapper{
 	display: inline-block;
@@ -566,6 +579,7 @@ footer h3::before{
 	padding-bottom: 150px;
 	margin: 0 auto;
 	flex-direction: column;
+	position: relative;
 }
 
 .works-block h3{
@@ -619,23 +633,17 @@ footer{
 	color: white;
 	cursor: pointer;
 	box-shadow: 0px 25px 18px -10px rgba(0, 0, 0, 0.29);
-	top: -5px;
+	-webkit-transform: scale(1.04);
+  	-ms-transform: scale(1.04);
+  	transform: scale(1.04);
 }
 
-/*.works-list li:after{
-	display: block;
-	content: "";
-	width: 150px;
-	height: 6px;
-	background-color: #0057c8;
-	border-radius: 4px 4px 0 0;
-	align-self: center;
-	bottom: 0;
-	position: absolute;
-}*/
+.works-list a{
+	text-decoration: none;
+}
 
-/*.works-list li:nth-child(3n) {
-  background: silver;
+/*.works-list li:nth-child(1) {
+  background: #aed1e3;
 }*/
 
 .works-block .button{
@@ -662,15 +670,13 @@ footer{
 	bottom: 0;
 }
 
-.blue-line:hover{
+.blue-line-hover{
 	width: 100%;
 	border-radius: 0 0 4px 4px;
 }
 
 
 /*end of recent works block*/
-
-
 
 footer{
 	background-color: #070f1c;
@@ -683,7 +689,8 @@ footer{
 
 footer h3,
 footer p,
-footer .social{
+footer .social,
+.coma{
 	margin: 0 auto;
 	text-align: center;
 	position: relative;
@@ -715,69 +722,29 @@ footer .social:before{
 	display: none;
 }
 
-/*footer .coma{
+.coma{
+	z-index: 0;
+}
+
+.coma::after{
+	display: block;
+	content: "";
 	position: absolute;
-	width: 70px;
-	height: 80px;
+	width: 180px;
+	height: 130px;
 	background: rgba(17, 23, 35, 0) url(img/svg/coma-01-01.svg) 50% no-repeat;
-	left: -120px;
-	z-index: 2;
-}*/
+	z-index: 0;
+	bottom: 75px;
+	left: -90px;
+}
 
 
 /*footer   /-/-/-/ ends*/
 
-
-
-
-
-
-
-
-
-
-
-/*
-
-#slider{
-	width: 1040px;
-	height: 544px;
-	float: right;
-	position: relative;
+.works-list .work-active{
+	color: white;
 }
 
-#slides{
-	background: #070f1c;
-	box-shadow: 5px ;
-	-webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
-	   -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
-	   	 -o-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
-	   	-ms-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
-	        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-		    border-radius: 4px;
+.works-list .work-active-sub{
+	color: #0054ff;
 }
-
-.inner{
-	width: 600%;
-}
-
-.page{
-	float: left;
-	width: 16.66%;
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-		    border-radius: 4px;
-}
-
-.page img{
-	width: 1040px;
-	height: 544px;
-}
-
-#overflow{
-	overflow: hidden;
-}
-*/
-/* slider ends*/

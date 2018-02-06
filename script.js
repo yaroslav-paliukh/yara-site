@@ -32,3 +32,18 @@ function showSlides(n){
 	slides[slideIndex-1].style.display = "block";
 	dots[slideIndex-1].className += "active";
 }
+
+
+
+//jq
+
+$(document).ready(function(){
+    $(".card").hover(function() {
+	    	$(this).find("h4").toggleClass("work-active anime-white");
+		    $(this).find("p").toggleClass("work-active-sub anime-white");
+		    $(this).find(".blue-line").toggleClass(" blue-line-hover");
+		    $(this).find(".blue-line").addClass("anime-white");
+		    $(this).find("h4").addClass("anime-white");
+		    $(this).find("p").addClass(" anime-white");
+	 });
+});
