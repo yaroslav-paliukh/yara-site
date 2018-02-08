@@ -20,6 +20,12 @@ body{
 	box-sizing: border-box;
 }
 
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
 
 /*.clearfix::after{
@@ -42,7 +48,7 @@ body{
 /* header and fronton /-/-/-/ begins */
 
 .fronton{
-	min-height: 960px;
+	padding-bottom: 120px;
 	position: relative;
 }
 
@@ -106,7 +112,7 @@ header{
 }
 
 header nav{
-	margin-right: 40px;
+	margin-right: 50px;
 }
 
 header nav a{
@@ -341,7 +347,8 @@ h2{
 	background-color: #141a26;
 	min-height: 10px;
 	width: 100%;
-	padding: 115px 0;
+	padding-top: 120px;
+	padding-bottom: 170px;
 	position: relative;
 }
 
@@ -369,25 +376,31 @@ h2{
 	/*overflow: hidden;*/
 }
 
+.wrapper-gradient{
+	width: 100%;
+	/*overflow: hidden;*/
+}
+
  .mySlides{
  	position: relative;
  	height: 544px;
  }
 
-.mySlides:before{
-	position: absolute;
-	content: "";
+.gradient-overlay{
+	position: relative;
 	width: 1040px;
 	height: 544px;
-	right: 0;
 	top: 0;
-	background: linear-gradient( 90deg, rgb(7,15,28) 0%, rgba(7,15,28,0) 130%); ;
-	background-image: linear-gradient( 90deg, rgb(7,15,28) 0%, rgba(7,15,28,0) 130%);
-	background-image: -webkit-linear-gradient(left, rgb(7,15,28) 0%, rgba(7,15,28,0) 130%);
-    background-image: -o-linear-gradient(left, rgb(7,15,28) 0%, rgba(7,15,28,0) 130%);
-    background-image: linear-gradient(to right, rgb(7,15,28) 0%, rgba(7,15,28,0) 130%);
+	background: linear-gradient( 0deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: -moz-linear-gradient( 0deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+	background-image: -ms-linear-gradient( 0deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
 	border-radius: 4px;
 	z-index: 4;	
+	float: right;
 }
 
 .mySlides .images{
@@ -395,12 +408,11 @@ h2{
 	right: 0;
 	max-width: 1040px;
 	border-radius: 4px;
-		box-shadow: 5px;
--webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.5);
-   -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.5);
-   	 -o-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.5);
-   	-ms-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+   -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+   	 -o-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+   	-ms-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
         z-index: 3;
     }
 
@@ -416,7 +428,7 @@ h2{
 }
 
 .prev:hover{
-	background: rgb(17, 23, 35) url("img/svg/Arrow-to-left-hover.svg") 45% no-repeat;
+	background: rgba(14, 19, 30, 0.9) url("img/svg/Arrow-to-left-hover.svg") 45% no-repeat;
 }
 
 .next:hover{
@@ -435,14 +447,14 @@ h2{
 	border-radius: 4px;
 	background-size: 20px 40px;
 	z-index: 10;
-	top: 35%;
+	top: 37%;
 }
 
 .wrapper-inner{
 	position: absolute;
 	top: 135px;
 	left: 115px;
-	font-size: 17px;
+	font-size: 18px;
 	max-width: 500px;
 	color: #fff;
 	z-index: 5;
@@ -506,6 +518,7 @@ h2{
 	display: inline-block;
 	float: left;
 	margin-left: 21%;
+	font-size: 18px;
 }
 
 .dot{
@@ -580,8 +593,8 @@ h2{
 
 .works-block{
 	max-width: 1364px;
-	padding-top: 150px;
-	padding-bottom: 150px;
+	padding-top: 110px;
+	padding-bottom: 110px;
 	margin: 0 auto;
 	flex-direction: column;
 	position: relative;
@@ -607,7 +620,7 @@ footer h3{
 
 .works-list p,
 .works-block .button{
-	font-size: 17px;
+	font-size: 18px;
 	font-weight: 300;
 }
 
@@ -778,8 +791,25 @@ footer .social:before{
     -moz-radial-gradient( 500px 25%, circle, white 20px, #ccc 40px);
 }
  */
+ 
+/*@media only screen and (min-width : 1024px) and (max-width : 1189px) */
 
-@media only screen and (min-width : 320px) and (max-width : 1172px) {
+
+@media only screen and (min-width : 300px) and (max-width : 1189px) {
+	
+	.logo-wrapper{
+		padding: 25px;
+	}
+
+	header nav a{
+		padding-top: 4px;
+	}
+
+	.fronton-wrapper h2{
+		font-size: 400%;
+		bottom: 40px;
+	}
+
 	.dark-back,
 	.border-back,
 	.fronton h1:before{
@@ -788,17 +818,130 @@ footer .social:before{
 
 	.fronton-wrapper h1{
 		font-size: 500%;
+		margin-top: 84px;
 	}
 
 	.wrapper-fronton-center{
-		margin-left: 100px;
-		margin-top: 150px;
+		margin-top: 100px;
+		margin-left: 80px;
 	}
+
+	.middle-wrapper{
+	display: inline-block;
+	padding-left: 316px;
+	top: -20px;
+}
+
+	.middle-wrapper ul li{
+		display: inline;
+		width: 100%;
+	}
+
+	.middle-wrapper .specs{
+		float: left;
+	}
+
+	.specs li a{
+		margin-top: 0px;
+		margin-right: 5px;
+		padding: 10px 20px;
+		font-size: 22px;
+	}
+
+	.middle-wrapper{
+		width: 100%;
+	}
+
+	.middle-wrapper .social{
+		display: inline-block;
+		position: relative;
+		float: left;
+		top: 11px;
+		left: 15px;
+		width: 133px;
+	}
+
+	.middle-wrapper .social::before{
+		display: none;
+	}
+
+	.middle-wrapper .social li a{
+		margin: 0;
+	}
+
+
+	@media only screen and (min-width : 1121px) and (max-width : 1189px) {
+		
+		.wrapper-fronton-center{
+			margin-top: 120px;
+			margin-left: 130px;
+		}
+
+		.fronton-wrapper h1{
+			font-size: 550%;
+	}
+	}
+
+
+
 
 }
 
 
+@media only screen and (min-width : 290px) and (max-width : 1480px) {
+	
 
+	.prev{
+		left: 0;
+	}
 
+	.prev, .next{
+		padding: 65px 50px;
+	}
+
+}
+
+@media only screen and (min-width : 290px) and (max-width : 1057px) {
+	.detile .dot-wrapper{
+		display: block;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.detile{
+		padding-bottom: 80px;
+	}
+
+	.wrapper-gradient,
+	.mySlides {
+		width: 100vw;
+		height: 52vw;
+	}
+
+	.gradient-overlay{
+		width: 100vw;
+		height: calc(52vw + 3px);
+		float: right;
+	}
+
+	.square-line{
+		display: none;
+	}
+
+	.wrapper-inner{
+		top: 12vw;
+	}
+
+	.prev, .next{
+		padding: 120px 50px;
+		
+		top: 30%;
+		top: 12vw;
+	}
+
+	.detile{
+		padding-bottom: 100px;
+	}
+}
 
 
