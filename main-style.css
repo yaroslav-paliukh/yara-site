@@ -1,3 +1,4 @@
+
 body, 
 .wrapper{
 	margin: 0 auto;
@@ -19,11 +20,9 @@ body{
 	box-sizing: border-box;
 }
 
-.wrapper{
-	max-width: 1364px;
-}
 
-.clearfix::after{
+
+/*.clearfix::after{
 	content: "";
 	display: block;
 	height: 0px;
@@ -35,6 +34,30 @@ body{
     clear: both;
     background: red;
     display: block;
+}*/
+
+
+
+
+/* header and fronton /-/-/-/ begins */
+
+.fronton{
+	min-height: 960px;
+	position: relative;
+}
+
+.fronton::after,
+.detile::after,
+.works-block::after{
+	display: block;
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 56px;
+	background-color: #0054ff;
+	left: 50%;
+	bottom: -28px;
+	z-index: 10;
 }
 
 .logo{
@@ -51,8 +74,6 @@ body{
 .logo:hover{
 	background-image: url(img/svg/logo1.svg);
 }
-
-/* header and fronton /-/-/-/ begins */
 
 .logo-wrapper{
 	display: flex;
@@ -78,11 +99,20 @@ nav a{
 	width: 250px;
 }
 
+header{
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 45px;
+}
+
+header nav{
+	margin-right: 40px;
+}
+
 header nav a{
 	display: inline-block;
 	color: #596788;
 	text-decoration: none;
-	margin-left: 24px;
 	font-size: 17px;
 	letter-spacing: 0;
 }
@@ -91,10 +121,8 @@ header nav a:hover{
 	color: #fff;
 }
 
-header{
-	display: flex;
-	justify-content: flex-end;
-	padding-top: 44px;
+.wrapper{
+	max-width: 1364px;
 }
 
 h1, h2, h3,
@@ -103,25 +131,6 @@ h1, h2, h3,
 	font-size: 100px;
 	font-family: 'Yeseva One';
 	font-weight: 400;
-}
-
-.fronton{
-	min-height: 960px;
-	position: relative;
-}
-
-.fronton::after,
-.detile::after,
-.works-block::after{
-	display: block;
-	content: "";
-	position: absolute;
-	width: 2px;
-	height: 56px;
-	background-color: #0054ff;
-	left: 50%;
-	bottom: -28px;
-	z-index: 10;
 }
 
 h2{
@@ -153,18 +162,29 @@ h2{
 	z-index: -1;
 }
 
+/*.fronton-wrapper h1::before{
+	content: "";
+	position: absolute;
+	top: -60px;
+	left: -330px;
+	z-index: -1;
+	width: 940px;
+	height: 155px;
+	background: url(img/svg/Yaroslav-01.svg) no-repeat;
+}
+*/
+
 .fronton-wrapper h2{
 	position: relative;
-	display: inline;
+	display: inline-block;
 	bottom: 30px;
 	padding-left: 25px;
-
 }
 
 .dark-back,
 .liner-back,
 .border-back{
-	display: block;
+	display: inline-block;
 	position: absolute;
 	z-index: -1;
 }
@@ -332,19 +352,8 @@ h2{
 	transition: 0.5s ease;
 	-webkit-transition: 0.5s ease;     
 }
+
 /*animation ends*/
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* slider begins*/
@@ -509,8 +518,6 @@ h2{
 	color: #596788;
 	position: relative;
 	z-index: 5;
-	/*background-color: #070f1c;
-	border-radius: 0 0 4px 4px;*/
 }
 
 .dot:hover{
@@ -569,9 +576,7 @@ h2{
 	border-radius: 0 0 4px 4px;
 }
 
-
-
-/* ------------------------------Recently block begins--------------------------------------*/
+/* --------------Recently block begins------------*/
 
 .works-block{
 	max-width: 1364px;
@@ -626,25 +631,36 @@ footer{
 	margin: 20px;
 	flex-direction: column;
 	position: relative;
-	/*box-shadow: 0px 21px 18px 0px rgba(0, 0, 0, 0.29);*/
 }
 
 .works-list li:hover{
-	color: white;
 	cursor: pointer;
 	box-shadow: 0px 25px 18px -10px rgba(0, 0, 0, 0.29);
 	-webkit-transform: scale(1.04);
   	-ms-transform: scale(1.04);
   	transform: scale(1.04);
+	background-image: radial-gradient( 50% 50%, rgb(26,33,46) 0%, rgb(7,15,28) 50% );
+	background-image: -moz-radial-gradient( 50% 50%, rgb(26,33,46) 0%, rgb(7,15,28) 50% );
+	background-image: -webkit-radial-gradient( 50% 50%, rgb(26,33,46) 0%, rgb(7,15,28) 50% );
+	background-image: -ms-radial-gradient( 50% 50%, rgb(26,33,46) 0%, rgb(7,15,28) 50% );
 }
 
-.works-list a{
-	text-decoration: none;
+.works-list li:nth-child(1) {
+  background: #0060dd;
 }
 
-/*.works-list li:nth-child(1) {
-  background: #aed1e3;
-}*/
+.works-list li:nth-child(1):hover {
+  background: #0054ff;
+}
+
+.works-list li:nth-child(1) div{
+	background-color: #fff;
+}
+
+.works-list li:nth-child(1) h4, 
+.works-list li:nth-child(1) p{
+	color: #fff;
+}
 
 .works-block .button{
 	font-weight: 400;
@@ -673,6 +689,7 @@ footer{
 .blue-line-hover{
 	width: 100%;
 	border-radius: 0 0 4px 4px;
+	background-color: #0054ff;
 }
 
 
@@ -748,3 +765,40 @@ footer .social:before{
 .works-list .work-active-sub{
 	color: #0054ff;
 }
+
+/*.root-id{
+	background-image: radial-gradient( at calc(100% * var(--mouse-x)) calc(100% * var(--mouse-y)), transparent, black 30%;);
+}
+*/
+
+/* .action-point{
+	<позиция>,] [<форма> || <размер>,] <стоп> [, <стоп>], <стоп>
+	background: radial-gradient( 500px 25%, circle, white 20px, #ccc 40px);
+	-webkit-gradient( radial, 500 25%, 20, 500 25%, 40, from(white), to(#ccc));
+    -moz-radial-gradient( 500px 25%, circle, white 20px, #ccc 40px);
+}
+ */
+
+@media only screen and (min-width : 320px) and (max-width : 1172px) {
+	.dark-back,
+	.border-back,
+	.fronton h1:before{
+		display: none;
+	}
+
+	.fronton-wrapper h1{
+		font-size: 500%;
+	}
+
+	.wrapper-fronton-center{
+		margin-left: 100px;
+		margin-top: 150px;
+	}
+
+}
+
+
+
+
+
+
