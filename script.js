@@ -26,11 +26,11 @@
 		}
 
 		for (i = 0; i<dots.length; i++) {
-			dots[i].className = dots[i].className.replace("active","");
+			dots[i].className = dots[i].className.replace("active"," ");
 		}
 		
-		slides[slideIndex-1].style.display = "flex";
-		dots[slideIndex-1].className += "active";
+		slides[slideIndex-1].style.display = " flex";
+		dots[slideIndex-1].className += " active";
 	}
 
 
@@ -38,7 +38,7 @@
 //jq
 
 $(document).ready(function(){
-
+	//yark
 	$("#menu").on("click","a", function (event) {
 	        		event.preventDefault();
 	       			var id  = $(this).attr('href'),
@@ -46,16 +46,26 @@ $(document).ready(function(){
 	        $('body,html').animate({scrollTop: top}, 500);
 	    });
 
+	//show-all-button
+	var $hiding = $('.hiding'),
+         $buttonCenter = $('.buttonCenter');
+     $('.buttonCenter').click(function () {
+         $hiding.finish();
+         var vis = $('.hiding').is(":visible"), //show all or hide on button
+             text = vis ? 'SHOW MORE' : 'HIDE SOME';
+         $buttonCenter.text(text);
+         $hiding.slideToggle("slow");
+         return false;
+     });
+
+	//hovers on works
     $(".card").hover(function() {
 	    	$(this).find("h4").toggleClass("work-active anime-white");
 		    $(this).find("p").toggleClass("work-active-sub anime-white");
 		    $(this).find(".blue-line").toggleClass(" blue-line-hover");
 		    $(this).find(".blue-line").addClass("anime-white");
 		    $(this).find("h4").addClass("anime-white");
-		    $(this).find("p").addClass(" anime-white");
-
-		    //yakr
-		    
+		    $(this).find("p").addClass(" anime-white");		    
 	 });
 });
 
