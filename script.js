@@ -38,6 +38,14 @@
 //jq
 
 $(document).ready(function(){
+
+	$("#menu").on("click","a", function (event) {
+	        		event.preventDefault();
+	       			var id  = $(this).attr('href'),
+	            	top = $(id).offset().top;
+	        $('body,html').animate({scrollTop: top}, 500);
+	    });
+
     $(".card").hover(function() {
 	    	$(this).find("h4").toggleClass("work-active anime-white");
 		    $(this).find("p").toggleClass("work-active-sub anime-white");
@@ -45,6 +53,9 @@ $(document).ready(function(){
 		    $(this).find(".blue-line").addClass("anime-white");
 		    $(this).find("h4").addClass("anime-white");
 		    $(this).find("p").addClass(" anime-white");
+
+		    //yakr
+		    
 	 });
 });
 
