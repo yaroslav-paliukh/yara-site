@@ -343,6 +343,21 @@ h2{
 	transition: 0.5s ease;
 	-webkit-transition: 0.5s ease;     
 }
+
+
+.move-block{
+	animation-name: move;
+	animation-duration: 2s;	
+}
+
+@keyframes move{
+	from{
+		opacity: 0;
+		}
+	to{
+		opacity: 1;
+	}
+}
 /*animation ends*/
 
 
@@ -646,20 +661,30 @@ footer{
 	background-image: -ms-radial-gradient( 50% 50%, rgb(26,33,46) 0%, rgb(7,15,28) 50% );
 }
 
-.works-list li:nth-child(1) {
+.works-list li:nth-child(1),
+.works-list li:nth-child(5),
+.works-list li:last-child{
   background: #0060dd;
 }
 
-.works-list li:nth-child(1):hover {
+.works-list li:nth-child(1):hover,
+.works-list li:nth-child(5):hover,
+.works-list li:last-child:hover {
   background: #0054ff;
 }
 
-.works-list li:nth-child(1) div{
+.works-list li:nth-child(1) div,
+.works-list li:nth-child(5) div,
+.works-list li:last-child div{
 	background-color: #fff;
 }
 
 .works-list li:nth-child(1) h4, 
-.works-list li:nth-child(1) p{
+.works-list li:nth-child(1) p,
+.works-list li:nth-child(5) h4,
+.works-list li:nth-child(5) p,
+.works-list li:last-child h4,
+.works-list li:last-child p{
 	color: #fff;
 }
 
@@ -769,21 +794,6 @@ footer .social:before{
 	color: #0054ff;
 }
 
-/*.root-id{
-	background-image: radial-gradient( at calc(100% * var(--mouse-x)) calc(100% * var(--mouse-y)), transparent, black 30%;);
-}
-*/
-
-/* .action-point{
-	<позиция>,] [<форма> || <размер>,] <стоп> [, <стоп>], <стоп>
-	background: radial-gradient( 500px 25%, circle, white 20px, #ccc 40px);
-	-webkit-gradient( radial, 500 25%, 20, 500 25%, 40, from(white), to(#ccc));
-    -moz-radial-gradient( 500px 25%, circle, white 20px, #ccc 40px);
-}
- */
- 
-/*@media only screen and (min-width : 1024px) and (max-width : 1189px) */
-
 
 @media only screen and (min-width : 300px) and (max-width : 1189px) {
 	
@@ -858,9 +868,9 @@ footer .social:before{
 	.middle-wrapper .social li a{
 		margin: 0;
 	}
+}
 
-
-	@media only screen and (min-width : 1121px) and (max-width : 1189px) {
+@media only screen and (min-width : 1121px) and (max-width : 1189px) {
 		
 		.wrapper-fronton-center{
 			margin-top: 120px;
@@ -869,14 +879,8 @@ footer .social:before{
 
 		.fronton-wrapper h1{
 			font-size: 550%;
-	}
-	}
-
-
-
-
+		}
 }
-
 
 @media only screen and (min-width : 240px) and (max-width : 1480px) {
 	.prev{
@@ -932,13 +936,79 @@ footer .social:before{
 }
 
 @media only screen and (min-width : 220px) and (max-width : 979px) {
+	
+	.fronton h1{
+		font-size: 400%;
+		margin-top: 100px;
+	}
+
+	.fronton h2{
+		font-size: 300%;
+		bottom: 50px;
+	}
+
+	header{
+		padding-top: 25px;
+	}
+
+	header nav{
+		margin-right: 30px;
+	}
+
+	.specs li a{
+		margin-bottom: 10px;
+	}
+	
+	.fronton .social{
+		left: 0;
+		top: 0;
+	}
+	
+	.detile h3{
+		font-size: 250%;
+		flex-wrap: wrap;
+	}
+
+	.wrapper-inner .button{
+		align-self: flex-left;
+	}
+
+	.prev, .next{
+		top: 10vw;
+		padding: 80px 55px;
+	}
+
+	.detile .dot-wrapper{
+		display: flex;
+		justify-content: center;		
+	}
+
+	.detile{
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+}
+
+@media only screen and (min-width : 648px) and (max-width: 770px) {
+	
+	.fronton .wrapper-fronton-center{
+		margin-left: 20px;
+	}
+
+	.fronton h1{
+		font-size: 350%;
+	}
+}
+
+@media only screen and (min-width : 220px) and (max-width: 649px) {
+	
 	.logo-wrapper{
 		padding: 0;
 		padding-left: 20px;
 	}
 
 	.logo-discript,
-	.gradient-overlay,
 	.wrapper-fronton-center .liner-back{
 		display: none;
 	}
@@ -960,19 +1030,11 @@ footer .social:before{
 		position: relative;
 		bottom: 115px;
 	}
-	
-	header{
-		padding-top: 25px;
-	}
-
-	header nav{
-		margin-right: 30px;
-	}
-
 
 	.fronton .wrapper-fronton-center{
-		margin-left: 20px;
+		margin-left: 60px;
 		margin-top: 40px;
+		max-width: 500px;
 	}
 	
 	.fronton .middle-wrapper{
@@ -981,55 +1043,32 @@ footer .social:before{
 		margin-top: -10px;
 	}
 
-	.specs li a{
-		margin-bottom: 10px;
-	}
-	
-	.fronton .social{
-		left: 0;
-		top: 0;
-	}
-	
-	.detile h3{
-		font-size: 250%;
+	.fronton h1{
+		font-size: 300%;
+		display: inline-block;
+		margin-top: 70px;
+		line-height: 1;
 	}
 
-	.detile .wrapper-inner{
-		left: 25px;
-		top: 75vw;
-	}
-
-	.wrapper-inner .button{
-		align-self: flex-left;
-	}
-
-	.prev, .next{
-		top: 0;
-		padding: 80px 55px;
+	.fronton h2{
+		font-size: 200%;
+		margin-left: 64px;
+		position: relative;
+		bottom: 115px;
 	}
 
 	.detile .dot-wrapper{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: flex-end;
-		margin-top: calc(50% + 1vw);
-	}
-
-	.detile{
-		padding-top: 70px;
-		padding-bottom: calc(120vw - 60px);
-	}
-
-	.works-block h3{
-		font-size: 200%;
-	}
-
-	.works-list li{
-		width: 100%;
-		min-height: 20vw;
-		margin: 15px 10px;
+		opacity: 0;
 	}
 }
 
+@media only screen and (min-width : 220px) and (max-width: 500px){
+
+	.fronton .wrapper-fronton-center{
+		margin-left: 20px;
+		margin-top: 40px;
+	}
+
+
+}
 
