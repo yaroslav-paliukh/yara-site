@@ -343,7 +343,6 @@ h2{
 	transition: 0.5s ease;
 	-webkit-transition: 0.5s ease;     
 }
-
 /*animation ends*/
 
 
@@ -712,6 +711,7 @@ footer{
 	flex-direction: column;
 	margin: 0 auto;
 	position: relative;
+	overflow: hidden;
 }
 
 footer h3,
@@ -907,7 +907,7 @@ footer .social:before{
 
 	.gradient-overlay{
 		width: 100vw;
-		height: 51.55vw;
+		height: 51.9vw;
 		float: right;
 	}
 
