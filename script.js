@@ -68,23 +68,26 @@ $(document).ready(function(){
 		    $(this).find("p").addClass(" anime-white");		    
 	 });
 
-	$(".move-block").swipe( {
-	        swipeLeft:leftSwipe,
-	        swipeRight:rightSwipe,
-	        threshold:0
-	});
-	function leftSwipe(event){
-	        alert('swipe left');
-	}
-	function rightSwipe(event){
-	        alert('swipe right');
-	}
+ //    //swipes
+	// $(".move-block").swipe( {
+	//         swipeLeft:leftSwipe,
+	//         swipeRight:rightSwipe,
+	//         threshold:0
+	// });
+	// function leftSwipe(event){
+	//         alert('swipe left');
+	// }
+	// function rightSwipe(event){
+	//         alert('swipe right');
+	// }
+
+	//<!-- <script type="text/javascript" src="jquery.touchSwipe.min.js"></script> -->
 
 });
 
 
 
-
+//
 //mouse-gradient-script by Lea Verou:
 
 // var root = document.getElementsByTagName("works-list li");
