@@ -1,172 +1,1074 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Yaroslav Paliukh</title>
-	<link rel="stylesheet" href="main-style.css">
-	<link href="https://fonts.googleapis.com/css?family=Yeseva+One&amp;subset=cyrillic" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+body, 
+.wrapper{
+	margin: 0 auto;
+	padding: 0;
+}
+
+body{
+	font-family: "Roboto";
+	font-size: 17px;
+	background-color: #1a212e;
+	-moz-user-select: none;
+  	-khtml-user-select: none;
+  	-webkit-user-select: none;
+  	user-select: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* header and fronton /-/-/-/ begins */
+
+.fronton{
+	padding-bottom: 120px;
+	position: relative;
+}
+
+.fronton::after,
+.detile::after,
+.works-block::after{
+	display: block;
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 56px;
+	background-color: #0054ff;
+	left: 50%;
+	bottom: -28px;
+	z-index: 10;
+}
+
+.logo{
+	display: inline-block;
+	color: #0054ff;
+	width: 70px;
+	height: 70px;
+	background-image: url(img/svg/logo2.svg);
+	font-size: 20px;
+	color: #0054ff;
+	text-decoration: none;
+}
+
+.logo:hover{
+	background-image: url(img/svg/logo1.svg);
+}
+
+.logo-wrapper{
+	display: flex;
+	position: absolute;
+	padding-top: 44px;
+	padding-left: 44px;
+}
+
+.logo-discript,
+nav a{
+	display: inline-block;
+	color: #0054ff;
+	margin-left: 14px;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 23px;
+	letter-spacing: 0.3pt;
+}
+
+.logo-discript{
+	width: 250px;
+}
+
+header{
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 45px;
+}
+
+header nav{
+	margin-right: 50px;
+}
+
+header nav a{
+	display: inline-block;
+	color: #596788;
+	text-decoration: none;
+	font-size: 17px;
+	letter-spacing: 0;
+}
+
+header nav a:hover{
+	color: #fff;
+}
+
+.wrapper{
+	max-width: 1364px;
+}
+
+h1, h2, h3,
+.works-block h4{
+	color: white;
+	font-size: 100px;
+	font-family: 'Yeseva One';
+	font-weight: 400;
+}
+
+h2{
+	color: #006fff;
+	font-size: 68px;
+}
+
+.wrapper-fronton-center{
+	display: block;
+	position: relative;
+	margin-top: 205px;
+	margin-left: 235px;
+}
+
+.fronton-wrapper h1{
+	display: inline-block;
+	position: absolute;
+	margin-top: 80px;
+	margin-left: -195px;
+}
+
+.fronton-wrapper h1::before{
+	content: "Yaroslav";
+	position: absolute;
+	color: #141925;
+	font-size: 210px;
+	top: -100px;
+	left: -315px;
+	z-index: -1;
+}
+
+/*.fronton-wrapper h1::before{
+	content: "";
+	position: absolute;
+	top: -60px;
+	left: -330px;
+	z-index: -1;
+	width: 940px;
+	height: 155px;
+	background: url(img/svg/Yaroslav-01.svg) no-repeat;
+}
+*/
+
+.fronton-wrapper h2{
+	position: relative;
+	display: inline-block;
+	bottom: 30px;
+	padding-left: 25px;
+}
+
+.dark-back,
+.liner-back,
+.border-back{
+	display: inline-block;
+	position: absolute;
+	z-index: -1;
+}
+
+.dark-back{
+	width: 580px;
+	height: 600px;
+	background-color: #141925;
+	border-radius: 4px;
+	top: -130px;
+	left: 360px;
+}
+
+.border-back{
+	width: 690px;
+	height: 520px;
+	border: solid 5px #242b3a;
+	top: -90px;
+	left: 210px;
+}
+
+.liner-back{
+	top: -36px;
+	left: 55px;
+	width: 2px;
+	height: 353px;
+	background-color: #0054ff;
+}
+
+.square-back{
+	display: inline-block;
+	width: 280px;
+	height: 280px;
+	background-color: #111723;
+	border: solid 25px #0054ff;
+	z-index: 2;
+}
+
+.widthrapper-fronton-right{
+	display:  inline-block;
+	position: relative;
+}
+
+.wrapper-fronton-right::after{
+	display: table;
+	content: "";
+}
+/* header and fronton /-/-/-/ ends */
+
+/*middle and social + buttons   /-/-/-/ begins*/
+
+.middle-wrapper{
+	display: block;
+	position: relative;
+	padding-left: 316px;
+	margin-top: 10px;
+	max-width: 940px;
+}
+
+.specs, .social{
+	display: inline-block;
+}
+
+.specs li,
+.social li
+{
+	list-style-type: none;
+}
+
+.specs li a{
+	margin-top: 10px;
+}
+
+.button{
+	display: inline-block;
+	margin: 0 auto;
+	padding: 15px 30px;
+	background-color: #0054ff;
+	font-family: "Roboto", sans-serif;
+	font-size: 30px;
+	font-weight: 300;
+	text-decoration: none;
+	color: #070f1c;
+	border-radius: 4px;
+}
+
+.button:hover{
+	background-color: #fff;
+}
+
+.works-block .buttonCenter{
+	margin: 0 auto;
+	width: 190px;
+}
+
+.social{
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	display: inline-block;
+	float: right;
+	height: 24px;
+	width: 180px;
+}
+
+.social li{
+	display: inline-block;
+}
+
+.social li a{
+	margin-left: 5px;
+	display: inline-block;
+	width: 30px;
+	height: 22px;
+	vertical-align: bottom;
+	background: url("img/socials.png") no-repeat;
+}
+
+.social .be:hover{
+	background-position: 0 -36px;
+}
+
+.social .inst{
+	background-position: -47px 1px;
+}
+
+.social .inst:hover{
+	background-position: -47px -35px;
+}
+
+.social .fb{
+	background-position: -91px 0;
+}
+
+.social .fb:hover{
+	background-position: -91px -36px;
+}
+
+.social .li{
+		background-position: -134px 0;
+}
+
+.social .li:hover{
+	background-position: -134px -36px;
+}
+
+.social::before{
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background-color: #0054ff;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+/*middle and social + buttons   /-/-/-/ ends*/
+
+.detile{
+	background-color: #141a26;
+	min-height: 10px;
+	width: 100%;
+	padding-top: 120px;
+	padding-bottom: 170px;
+	position: relative;
+}
+
+
+/* animations begins*/
+
+.anime-white{
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;     
+}
+
+
+.move-block{
+	animation-name: move;
+	animation-duration: 2s;	
+}
+
+@keyframes move{
+	from{
+		opacity: 0;
+		}
+	to{
+		opacity: 1;
+	}
+}
+/*animation ends*/
+
+
+/* slider begins*/
+
+.slideshow-container{
+	max-width: 1260px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.wrapper-slider{
+	max-height: 544px;
+	/*overflow: hidden;*/
+}
+
+.wrapper-gradient{
+	width: 100%;
+	/*overflow: hidden;*/
+}
+
+ .mySlides{
+ 	position: relative;
+ 	height: 544px;
+ }
+
+.gradient-overlay{
+	position: relative;
+	width: 1040px;
+	height: 544px;
+	top: 0;
+	background: linear-gradient( 90deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: -moz-linear-gradient( 90deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+    background-image: linear-gradient( 90deg, rgb(7,15,28) 8%, rgba(7,15,28,0.61) 100%, rgba(7,15,28,0) 100%);
+	border-radius: 4px;
+	z-index: 4;	
+	float: right;
+}
+
+.mySlides .images{
+	position: absolute;
+	right: 0;
+	max-width: 1040px;
+	border-radius: 4px;
+-webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+   -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+   	 -o-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+   	-ms-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+        z-index: 3;
+    }
+
+.prev{
+	background: rgba(17, 23, 35, 0) url("img/svg/Arrow-to-left.svg") 50% no-repeat;
+	left: -120px;
+}
+
+.next{
+	right: 0;
+	top: 0;
+	background: rgba(14, 19, 30, 0) url("img/svg/Arrow-to-right.svg") 45% no-repeat;
+}
+
+.prev:hover{
+	background: rgba(14, 19, 30, 0.9) url("img/svg/Arrow-to-left-hover.svg") 45% no-repeat;
+}
+
+.next:hover{
+	background: rgba(14, 19, 30, 0.9) url("img/svg/Arrow-to-right-hover.svg") 50% no-repeat;
+}
+
+.prev:hover, 
+.next:hover{
+	background-size: 20px 40px;
+}
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	padding: 65px 60px;
+	border-radius: 4px;
+	background-size: 20px 40px;
+	z-index: 10;
+	top: 37%;
+}
+
+.wrapper-inner{
+	position: absolute;
+	top: 135px;
+	left: 115px;
+	font-size: 18px;
+	max-width: 500px;
+	color: #fff;
+	z-index: 5;
+}
+
+.wrapper-inner h4,
+.wrapper-inner p{
+	margin-top: 10px;
+}
+
+.wrapper-inner h3{
+	font-size: 50px;
+}
+
+.wrapper-inner h4{
+	color: #0060dd;
+	font-weight: 700;
+}
+
+.wrapper-inner p{
+	font-weight: 300;
+}
+
+.wrapper-inner .button{
+	margin-top: 25px;
+	width: 155px;
+	height: 55px;
+	font-size: 17px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.03em;
+	vertical-align: baseline;
+	line-height: 1.45;
+}
+
+.square-line{
+	position: absolute;
+	width: 100%;
+	height: 450px;
+	border: solid 10px #0054ff;
+	background-color: #0e131e;
+	top: 45px;
+	left: 0px;
+	z-index: 1;
+}
+
+.square-line::before{
+	display: block;
+	position: absolute;
+	content: "";
+	width: 180px;
+	height: 120px;
+	background: rgba(17, 23, 35, 0) url(img/svg/coma-01-01.svg) 50% no-repeat;
+	z-index: 0;
+	top: 40%;
+	opacity: 0.6;
+}
+
+.dot-wrapper{
+	display: inline-block;
+	float: left;
+	margin-left: 21%;
+	font-size: 18px;
+}
+
+.dot{
+	cursor: pointer;
+	height: 77px;
+	width: 43px;
+	margin: 0 5px;
+	vertical-align: bottom;
+	display: inline-block;
+	color: #596788;
+	position: relative;
+	z-index: 5;
+}
+
+.dot:hover{
+	color: #fff;
+}
+
+.dot p:hover{
+	color: #fff;
+}
+
+.dot-wrapper p:after{
+	content: '';
+	position: absolute;
+	width: 43px;
+	height: 7px;
+	background-color: rgba(7, 15, 28, 0.3);
+	z-index: 1;
+	bottom: 23px;
+	left: 0;
+	z-index: -1;
+}
+
+.dot p:hover::after{
+	content: '';
+	position: absolute;
+	width: 43px;
+	height: 7px;
+	background-color: rgba(7, 15, 28, 1);
+	z-index: 1;
+	bottom: 23px;
+	left: 0;
+	z-index: -1;
+}
+
+.dot p{
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+.dot-wrapper .active{
+	color: #0060dd;
+	background-color: rgba(7, 15, 28, 1);
+	border-radius: 0 0 4px 4px;
+}
+
+.active:after,
+.currentSlide:after{
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background-color: #0060dd;
+	top: 30%;
+	left: 40%;
+}
+
+.dot .currentSlide{
+	background-color: rgba(7, 15, 28, 1);
+	border-radius: 0 0 4px 4px;
+}
+
+/* --------------Recently block begins------------*/
+
+.works-block{
+	max-width: 1364px;
+	padding-top: 110px;
+	padding-bottom: 110px;
+	margin: 0 auto;
+	flex-direction: column;
+	position: relative;
+}
+
+.works-block h3{
+	margin-bottom: 40px;
+}
+
+.works-block h3, 
+.works-list h4,
+.works-list p{
+	text-align: center;
+	font-size: 50px;
+}
+
+.works-list h4,
+.works-list p,
+footer h3{
+	font-size: 35px;
+	color: #596788;
+}
+
+.works-list p,
+.works-block .button{
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.works-block,
+.works-list,
+.works-list li,
+footer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.works-list li{
+	list-style-type: none;
+	width: 410px;
+	height: 250px;
+	background-color: #070f1c;
+	border-radius: 4px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 20px;
+	flex-direction: column;
+	position: relative;
+}
+
+.works-list li:hover{
+	cursor: pointer;
+	box-shadow: 0px 25px 18px -10px rgba(0, 0, 0, 0.29);
+	-webkit-transform: scale(1.04);
+  	-ms-transform: scale(1.04);
+  	transform: scale(1.04);
+	background-image: radial-gradient( 50% 50%, rgb(26,33,46) 0%, rgb(7,15,28) 50% );
+	background-image: -moz-radial-gradient( 50% 50%, rgb(26,33,46) 0%, rgb(7,15,28) 50% );
+	background-image: -webkit-radial-gradient( 50% 50%, rgb(26,33,46) 0%, rgb(7,15,28) 50% );
+	background-image: -ms-radial-gradient( 50% 50%, rgb(26,33,46) 0%, rgb(7,15,28) 50% );
+}
+
+.works-list li:nth-child(1),
+.works-list li:nth-child(5),
+.works-list li:last-child{
+  background: #0060dd;
+}
+
+.works-list li:nth-child(1):hover,
+.works-list li:nth-child(5):hover,
+.works-list li:last-child:hover {
+  background: #0054ff;
+}
+
+.works-list li:nth-child(1) div,
+.works-list li:nth-child(5) div,
+.works-list li:last-child div{
+	background-color: #fff;
+}
+
+.works-list li:nth-child(1) h4, 
+.works-list li:nth-child(1) p,
+.works-list li:nth-child(5) h4,
+.works-list li:nth-child(5) p,
+.works-list li:last-child h4,
+.works-list li:last-child p{
+	color: #fff;
+}
+
+.works-block .button{
+	font-weight: 400;
+	color: white;
+	letter-spacing: 0.3pt;
+	text-align: center ;
+	margin-top: 35px;
+}
+
+.works-block .button:hover{
+	color: #070f1c;
+}
+
+.blue-line{
+	/*display: block;
+	content: "";
+	position: relative;
+	margin: 0 auto;
+	top: 91px;
+	width: 150px;
+	height: 6px;
+	background-color: #0057c8;
+	border-radius: 4px 4px 0 0;*/
+	display: block;
+	content: "";
+	position: absolute;
+	width: 150px;
+	height: 6px;
+	background-color: #0057c8;
+	border-radius: 4px 4px 0 0;
+	align-self: center;
+	bottom: 0;
+}
+
+.blue-line-hover{
+	width: 100%;
+	border-radius: 0 0 4px 4px;
+	background-color: #0054ff;
+}
+
+/*end of recent works block*/
+
+footer{
+	background-color: #070f1c;
+	padding-top: 120px;
+	padding-bottom: 50px;
+	flex-direction: column;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+footer h3,
+footer p,
+footer .social,
+.coma{
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+footer p{
+	color: #0060dd;
+	font-size: 17px;
+	font-weight: 700;
+	padding-top: 20px;
+}
+
+footer .social{
+	margin-top: 40px;
+	opacity: 0.8;
+}
+
+footer .social:before{
+	display: none;
+}
+
+.coma{
+	z-index: 0;
+	width: 200px;
+	height: 0;
+}
+
+.coma::after{
+	display: block;
+	content: "";
+	position: relative;
+	width: 180px;
+	height: 130px;
+	background: rgba(17, 23, 35, 0) url(img/svg/coma-01-01.svg) 50% no-repeat;
+	z-index: 0;
+	bottom: 205px;
+	left: 10px;
+}
+
+
+/*footer   /-/-/-/ ends*/
+
+.works-list .work-active{
+	color: white;
+}
+
+.works-list .work-active-sub{
+	color: #0054ff;
+}
+
+
+@media only screen and (min-width : 300px) and (max-width : 1189px) {
 	
-</head>
-<body>
-		<div class="fronton">
-			<div class="logo-wrapper">
-				<a href="#" class="logo anime-white"></a>
-				<a href="#" class="logo-discript">YAROSLAV PALIUKH</a>
-			</div>
-			<div class="wrapper">
-				<header>
-					<nav>
-						<a href="works.html" class= "anime-white">WORKS</a>
-						<a href="about.html" class= "anime-white">ABOUT</a>
-					</nav>
-				</header>
-				<div class="fronton-wrapper">
-					<div class="wrapper-fronton-center">
-						<div class="dark-back"></div>
-						<div class="border-back"></div>
-						<div class="liner-back"></div>
-						<div class="square-back"></div>
-						<h1>Yaroslav Paliukh</h1>	
-						<h2>Designer</h2>
-						<div class="middle-wrapper">
-							<ul class="specs" id="menu">
-								<li><a href="#yakr" class="button anime-white">UI/UX</a></li>
-								<li><a href="#yakr" class="button anime-white">Web Design</a></li>
-								<li><a href="#yakr" class="button anime-white">Front-End</a></li>
-							</ul>
-							<ul class="social">
-								<li><a href="#" class="be"></a></li>
-								<li><a href="#" class="inst"></a></li>
-								<li><a href="#" class="fb"></a></li>
-								<li><a href="#" class="li"></a></li>
-							</ul>	
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="detile">
-			 <div class="slideshow-container">
-				 <div class="wrapper-slider">
-				  	<div class="mySlides  ">
-				  		<div class="wrapper-gradient ">
-				  			<div class="gradient-overlay"></div>
-				  			<img class="images" src="img/slider-works/crosslife-1040-544.jpg" style="width: 100%;" alt="">
-				  		</div>			  		
-				  		<div class="wrapper-inner move-block ">
-							<h3>CrossLife</h3>
-							<h4>Landing-page for ukranian gyms</h4>
-							<p>An experience that enabled me<br>to be more focused on the feelings,<br>site has to express at the first seconds.<br>A few seconds is all we have...</p>
-							<a href="#" class="button anime-white">Full view</a>
-						</div>
-				  	</div>
-				  	<div class="mySlides  ">
-					  	<div class="wrapper-gradient">
-					  		<div class="gradient-overlay"></div>
-					  		<img class="images" src="img/slider-works/it-factory-1040-544.jpg" style="width: 100%;" alt="">
-					  	</div>	
-						<div class="wrapper-inner move-block">
-							<h3>IT{factory}</h3>
-							<h4>Site for IT-courses in Dnipro</h4>
-							<p>The real chance to work in<br>collaboration with developers is<br>when you help them to make<br>something for themselves.</p>
-							<a href="#" class="button anime-white">Full view</a>
-						</div>
-					</div>
-					<div class="mySlides  ">
-						<div class="wrapper-gradient">
-							<div class="gradient-overlay"></div>
-							<img class="images" src="img/slider-works/stroy-servis-1040-544.jpg" style="width: 100%;" alt="">
-						</div>	
-						<div class="wrapper-inner move-block">
-							<h3>Строй Сервис</h3>
-							<h4>Landing for construction service</h4>
-							<p>You have to trust to architect like<br>to your doctor. This project was<br>the great apportunity to find out<br>what excites architects in sites.</p>
-							<a href="#" class="button anime-white">Full view</a>
-						</div>
-					</div>
-					<div class="mySlides  ">
-						<div class="wrapper-gradient">
-							<div class="gradient-overlay"></div>
-							<img class="images" src="img/slider-works/broadway-1040-544.jpg" style="width: 100%;" alt="">
-						</div>
-						<div class="wrapper-inner move-block">
-							<h3>Broadway</h3>
-							<h4>Landing-page for dance studio</h4>
-							<p>The new type of communication<br>for me was dance. Withot real<br>immersion in this culture I would<br>never change stereotype about it.</p>
-							<a href="#" class="button ">Full view</a>
-						</div>
-					</div>
-					<div class="mySlides  ">
-						<div class="wrapper-gradient">
-							<div class="gradient-overlay"></div>
-							<img class="images" src="img/slider-works/mr-1040-544.jpg" style="width: 100%;" alt="">
-						</div>
-						<div class="wrapper-inner move-block">
-							<h3>MR</h3>
-							<h4>Site for carved furniture studio</h4>
-							<p>The most difficult was to keep<br>the contrast in the style that was<br>preferable by customer and at the<br>same time to submit art nouveau<br></p>
-							<a href="#" class="button anime-white">Full view</a>
-						</div>	
-					</div>
-					<div class="mySlides  ">
-							<div class="wrapper-gradient">
-								<div class="gradient-overlay"></div>
-								<img class="images" src="img/slider-works/ural-1040-544.jpg" style="width: 100%;" alt="">
-							</div>
-						<div class="wrapper-inner move-block">
-							<h3>Ural Airlines</h3>
-							<h4>Site for airline users</h4>
-							<p>It was redesign of old site and<br>I was very exited about it. I tried<br>not to break old user scenaries<br>and refresh the visual.</p>
-							<a href="#" class="button anime-white">Full view</a>
-						</div>
-					</div>
-						<div class="square-line"></div> <!-- square -->
-				</div>
-				<a class="prev anime-white" onclick="plusSlides(-1)"></a>
-				<a class="next anime-white" onclick="plusSlides(1)"></a>
-				<div class="dot-wrapper" style="text-align: center;">
-			  		<span class="dot anime-white" onclick="currentSlide(1)"><p>1</p></span>
-			  		<span class="dot anime-white" onclick="currentSlide(2)"><p>2</p></span>
-			  		<span class="dot anime-white" onclick="currentSlide(3)"><p>3</p></span>
-			  		<span class="dot anime-white" onclick="currentSlide(4)"><p>4</p></span>
-			  		<span class="dot anime-white" onclick="currentSlide(5)"><p>5</p></span>
-			  		<span class="dot anime-white" onclick="currentSlide(6)"><p>6</p></span>
-			  	</div>
-			</div>
-		</div> 
-		<!-- .detile - second block ends -->
+	.logo-wrapper{
+		padding: 25px;
+	}
 
-		<!-- recently block begins -->
-		<div class="works-block">
-				<h3 id="yakr">Recently made projects</h3>
-				<ul class="works-list">
-					<li class="card"><h4>IT{factory}</h4><p>Codding school</p><div class="blue-line anime-white"></div></li>
-					<li class="card"><h4>BROADWAY</h4><p>Dancing school</p><div class="blue-line anime-white"></div></li>
-					<li class="card"><h4>Строй Сервис</h4><p>Construction company</p><div class="blue-line anime-white"></div></li>
-					<li class="card"><h4>CrossLife</h4><p>GYM</p><div class="blue-line anime-white"></div></li>
-					<li class="card"><h4>Mira</h4><p>Furniture company</p><div class="blue-line anime-white"></div></li>
-					<li class="card"><h4>Credo</h4><p>Book</p><div class="blue-line anime-white"></div></li>
-					<li class="card hiding" style="display:none"><h4>Sharlin</h4><p>Event agency</p><div class="blue-line anime-white"></div></li>
-					<li class="card hiding" style="display:none"><h4>FontLab</h4><p>Font workshop</p><div class="blue-line anime-white"></div></li>
-					<li class="card hiding" style="display:none"><h4>Horror-battle</h4><p>Event</p><div class="blue-line anime-white"></div></li>
-				</ul>
-				<a href="#" class="button buttonCenter anime-white">SHOW MORE</a>
-		</div>
-		<!-- Recently block Ends -->
+	header nav a{
+		padding-top: 4px;
+	}
 
-		<footer>
-			<h3>Thanks for your time</h3>
-			<p>If you like my works, please <br>say it to my by</p>
-			<ul class="social">
-				<li><a href="#" class="be"></a></li>
-				<li><a href="#" class="inst"></a></li>
-				<li><a href="#" class="fb"></a></li>
-				<li><a href="#" class="li"></a></li>
-			</ul>
-			<div class="coma"></div>
-		</footer>
-	<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+	.fronton-wrapper h2{
+		font-size: 400%;
+		bottom: 40px;
+	}
+
+	.dark-back,
+	.border-back,
+	.fronton h1:before{
+		display: none;
+	}
+
+	.fronton-wrapper h1{
+		font-size: 500%;
+		margin-top: 84px;
+	}
+
+	.wrapper-fronton-center{
+		margin-top: 100px;
+		margin-left: 80px;
+	}
+
+	.middle-wrapper{
+	display: inline-block;
+	padding-left: 316px;
+	top: -20px;
+}
+
+	.middle-wrapper ul li{
+		display: inline;
+		width: 100%;
+	}
+
+	.middle-wrapper .specs{
+		float: left;
+	}
+
+	.specs li a{
+		margin-top: 0px;
+		margin-right: 5px;
+		padding: 10px 20px;
+		font-size: 22px;
+	}
+
+	.middle-wrapper{
+		width: 100%;
+	}
+
+	.middle-wrapper .social{
+		display: inline-block;
+		position: relative;
+		float: left;
+		top: 11px;
+		left: 15px;
+		width: 133px;
+	}
+
+	.middle-wrapper .social::before{
+		display: none;
+	}
+
+	.middle-wrapper .social li a{
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width : 1121px) and (max-width : 1189px) {
+		
+		.wrapper-fronton-center{
+			margin-top: 120px;
+			margin-left: 130px;
+		}
+
+		.fronton-wrapper h1{
+			font-size: 550%;
+		}
+}
+
+@media only screen and (min-width : 240px) and (max-width : 1480px) {
+	.prev{
+		left: 0;
+	}
+
+	.prev, .next{
+		padding: 65px 50px;
+	}
+}
+
+@media only screen and (min-width : 240px) and (max-width : 1057px) {
+	.detile .dot-wrapper{
+		display: block;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.detile{
+		padding-bottom: 80px;
+	}
+
+	.wrapper-gradient,
+	.mySlides {
+		width: 100%;
+		height: auto;
+	}
+
+	.gradient-overlay{
+		width: 100vw;
+		height: 52.3vw;
+		float: right;
+	}
+
+	.square-line{
+		display: none;
+	}
+
+	.wrapper-inner{
+		top: 12vw;
+	}
+
+	.prev, .next{
+		padding: 120px 50px;
+		
+		top: 30%;
+		top: 12vw;
+	}
+
+	.detile{
+		padding-bottom: 100px;
+	}
+}
+
+@media only screen and (min-width : 220px) and (max-width : 979px) {
+	
+	.fronton h1{
+		font-size: 400%;
+		margin-top: 100px;
+	}
+
+	.fronton h2{
+		font-size: 300%;
+		bottom: 50px;
+	}
+
+	header{
+		padding-top: 25px;
+	}
+
+	header nav{
+		margin-right: 30px;
+	}
+
+	.specs li a{
+		margin-bottom: 10px;
+	}
+	
+	.fronton .social{
+		left: 0;
+		top: 0;
+	}
+	
+	.detile h3{
+		font-size: 250%;
+		flex-wrap: wrap;
+	}
+
+	.wrapper-inner .button{
+		align-self: flex-left;
+	}
+
+	.prev, .next{
+		top: 10vw;
+		padding: 80px 55px;
+	}
+
+	.detile .dot-wrapper{
+		display: flex;
+		justify-content: center;		
+	}
+
+	.detile{
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+}
+
+@media only screen and (min-width : 648px) and (max-width: 770px) {
+	
+	.fronton .wrapper-fronton-center{
+		margin-left: 20px;
+	}
+
+	.fronton h1{
+		font-size: 350%;
+	}
+}
+
+@media only screen and (min-width : 220px) and (max-width: 649px) {
+	
+	.logo-wrapper{
+		padding: 0;
+		padding-left: 20px;
+	}
+
+	.logo-discript,
+	.wrapper-fronton-center .liner-back{
+		display: none;
+	}
+
+	.fronton{
+		padding-bottom: 50px;
+	}
+	
+	.fronton h1{
+		font-size: 300%;
+		display: inline-block;
+		margin-top: 70px;
+		line-height: 1;
+	}
+
+	.fronton h2{
+		font-size: 200%;
+		margin-left: 64px;
+		position: relative;
+		bottom: 115px;
+	}
+
+	.fronton .wrapper-fronton-center{
+		margin-left: 60px;
+		margin-top: 40px;
+		max-width: 500px;
+	}
+	
+	.fronton .middle-wrapper{
+		padding-left: 0;
+		margin: 0 auto;
+		margin-top: -10px;
+	}
+
+	.fronton h1{
+		font-size: 300%;
+		display: inline-block;
+		margin-top: 70px;
+		line-height: 1;
+	}
+
+	.fronton h2{
+		font-size: 200%;
+		margin-left: 64px;
+		position: relative;
+		bottom: 115px;
+	}
+
+	.detile .dot-wrapper{
+		opacity: 0;
+	}
+}
+
+@media only screen and (min-width : 220px) and (max-width: 500px){
+
+	.fronton .wrapper-fronton-center{
+		margin-left: 20px;
+		margin-top: 40px;
+	}
+
+
+}
+
