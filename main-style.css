@@ -797,6 +797,9 @@ footer .social:before{
 
 
 /*  - - - - - about-page-begins - - - - - */
+body{
+	background-color: #141926;
+}
 
 .about-page,
 .wrapper-about-center{
@@ -810,13 +813,9 @@ footer .social:before{
 	padding-left: 100px;
 }
 
-.about-page .logo-about{
+.about-page .logo{
 	display: inline-block;
 	position: absolute;
-	width: 70px;
-	height: 70px;
-	background-image: url(img/svg/logo-about.svg);
-	background-repeat: no-repeat;
 	color: #3b4355;
 	text-decoration: none;
 	z-index: 7;
@@ -824,10 +823,6 @@ footer .social:before{
 	margin-top: 35px;
 	top: 0;
 	left: 0;
-}
-
-.about-page .logo-about:hover{
-	background-image: url(img/svg/logo-about-hover.svg);
 }
 
 .about-page header{
@@ -844,11 +839,11 @@ footer .social:before{
 }
 
 .about-page nav a{
-	color: #b8bcc9;
+	margin-left: 18px;
 }
 
 .about-page nav a:hover, .about-page nav a:last-child{
-	color: #3b4355;
+	color: #fff;
 }
 
 .square, .rectangle, .square:after, .square:before, .about-text-wrapper{
@@ -870,14 +865,14 @@ footer .social:before{
 
 .wrapper-about-center::after{
 	content: ' ';
-	background-color: #f5f9ff;
+	background-color: #0e131e;
 	width: 450px;
 	height: 450px;
 	border-radius: 50%;
 	position: absolute;
 	z-index: -1;
 	top: 160px;
-	left: 285px;
+	left: 265px;
 }
 
 .square{
@@ -893,14 +888,62 @@ footer .social:before{
 
 .square .about-social{
 	position: absolute;
-	bottom: -70px;
-	left: 35px;
-	width: 150px;
+	bottom: -75px;
+	left: 0;
+	width: 250px;
 	height: 50px;
+}
+
+.about-page .about-social .social{
+	width: 250px;
 }
 
 .about-social .social:before{
 	display: none;
+}
+
+.about-social .social li{
+	margin-left: 10px;
+	float: left;
+}
+
+.about-social .social li:first-child{
+	margin-left: 5px;
+}
+
+.about-social .social li:nth-child(2){
+	margin-left: 17px;
+}
+
+.about-social .social .be{
+	background-image: url(img/svg/behance-svg.svg);
+	background-size: 30px;
+	background-position: 0 -2px;
+}
+
+.about-social .social .inst{
+	background-image: url(img/svg/instagramm-svg.svg);
+	background-size: 21px;
+	background-position: 0 1px;
+}
+
+.about-social .social .fb{
+	background-image: url(img/svg/facebook-svg.svg);
+	background-size: 22px;
+	background-position: 0 0;
+}
+
+.about-social .social .li{
+	background-image: url(img/svg/linkedin-svg.svg);
+	background-size: 22px;
+	background-position: 0 0px;
+}
+
+.about-social .social .be,
+.about-social .social .inst,
+.about-social .social .fb,
+.about-social .social .li{
+	opacity: 0.4;
 }
 
 .about-social .social .be:hover,
@@ -910,44 +953,16 @@ footer .social:before{
 	opacity: 1;
 }
 
-.about-social .social .be:hover{
-	background-position: 0 0;
-}
-
-.about-social .social .inst:hover{
-	background-position: -47px 1px;
-}
-
-.about-social .social .fb:hover{
-	background-position: -91px 0;
-}
-
-.about-social .social .li:hover{
-		background-position: -134px 0;
-}
-
-.about-social .social .be,
-.about-social .social .inst,
-.about-social .social .fb,
-.about-social .social .li{
-	opacity: 0.5;
-}
-
-.about-social .social li{
-	margin-left: 4px;
-}
-
 .about-text-wrapper::before{
 	content: ' ';
 	position: absolute;
 	display: block;
 	width: 780px;
-	height: 540px;
+	height: 470px;
 	left: -115px;
-	top: -20px;
+	top: 40px;
 	z-index: -2;
-	border: solid 6px #f0f0f0;
-	opacity: .4;
+	border: solid 6px #1a212e;
 }
 
 .about-text-wrapper{
@@ -958,9 +973,13 @@ footer .social:before{
 	margin-top: -80px;
 }
 
+.about-text-wrapper h2{
+	color: #0054ff;
+}
+
 .about-text-wrapper h3{
 	margin-top: -10px;
-	color: #3b4355;
+	color: #0054ff;
 	font-size: 36px;
 }
 
@@ -968,9 +987,8 @@ footer .social:before{
 	font-size: 24px;
 	font-weight: 300;
 	margin-top: 25px;
-	color: #3b4355;
+	color: #fff;
 }
-
 
 
 @media only screen and (min-width : 300px) and (max-width : 1440px) {
@@ -993,7 +1011,7 @@ footer .social:before{
 		padding-left: 200px;
 	}
 
-	.about-page .logo-about{
+	.about-page .logo{
 		margin-left: 190px;
 	}
 
@@ -1011,7 +1029,7 @@ footer .social:before{
 
 @media only screen and (min-width : 300px) and (max-width : 1189px) {
 	
-	.about-page .logo-about{
+	.about-page .logo{
 		margin-top: 20px;
 	}
 
@@ -1184,7 +1202,7 @@ footer .social:before{
 		margin-right: 50px;
 	}
 
-	.about-page .logo-about{
+	.about-page .logo{
 		margin-top: 10px;
 	}
 
@@ -1240,7 +1258,7 @@ footer .social:before{
 		padding-left: 60px;
 	}
 
-	.about-page .logo-about{
+	.about-page .logo{
 		margin-left: 50px;
 	}
 
