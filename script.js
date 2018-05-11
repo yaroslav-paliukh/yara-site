@@ -12,6 +12,7 @@
 		var i;
 		var slides = document.getElementsByClassName("mySlides");
 		var dots = document.getElementsByClassName("dot");
+		var works = document.getElementsByClassName("works-image");
 
 		if (n > slides.length) {
 			slideIndex = 1;
@@ -25,20 +26,59 @@
 			slides[i].style.display = "none";
 		}
 
+		for (i = 0; i<works.length; i++){
+			works[i].style.display = "none";
+		}
+
 		for (i = 0; i<dots.length; i++) {
 			dots[i].className = dots[i].className.replace("active"," ");
 		}
 		
 		slides[slideIndex-1].style.display = " flex";
 		dots[slideIndex-1].className += " active";
+		works[slideIndex-1].style.display = " block";
 	}
 
+	// function goWork1(){
+	// 	window.location = 'works.html';
+	// 	window.onload = function () {
+	// 		var i;
+	// 		var current6 = document.getElementsByClassName("works-name");
+	// 		currentSlide(6);
+	// 	}
+	// }
+
+
+	// window.onload = function () {
+
+	//     //получаем идентификатор элемента
+	//     var a = document.getElementById('switch');
+	    
+	//     //вешаем на него событие
+	//     a.onclick = function() {
+	//         //производим какие-то действия
+	//         if (this.innerHTML=='On') this.innerHTML = 'Off';
+	//         else this.innerHTML = 'On';
+	//         //предотвращаем переход по ссылке href
+	//         return false;
+	//     }
+	// }
+
+// <a href="#" style="color: green;" onclick="return ChangeColor(this);">Изменить цвет</a>
+
+
+	//click event - to works
+	// $(document).ready(function(){
+	// 	$('.logo').on("click", function() {
+	// 	  window.location = 'works.html';
+	// 	});
+	// });
 
 
 //jq
 
 $(document).ready(function(){
-	//yark
+	//yakr
 	$("#menu").on("click","a", function (event) {
 	        		event.preventDefault();
 	       			var id  = $(this).attr('href'),
@@ -67,6 +107,43 @@ $(document).ready(function(){
 		    $(this).find("h4").addClass("anime-white");
 		    $(this).find("p").addClass(" anime-white");		    
 	 });
+
+
+// go top button
+$(document).ready(function(){
+  $('body').append('<a href="#" id="go-top"</a>');
+});
+
+$(function() {
+ $.fn.scrollToTop = function() {
+  $(this).hide().removeAttr("href");
+  if ($(window).scrollTop() >= "250") $(this).fadeIn("slow")
+  var scrollDiv = $(this);
+  $(window).scroll(function() {
+   if ($(window).scrollTop() <= "250") $(scrollDiv).fadeOut("slow")
+   else $(scrollDiv).fadeIn("slow")
+  });
+  $(this).click(function() {
+   $("html, body").animate({scrollTop: 0}, "slow")
+  })
+ }
+});
+
+$(function() {
+ $("#go-top").scrollToTop();
+});
+
+
+// popup
+$('.show-popup').click(function(){
+	var popupId = $('#' + $(this).attr("rel")); //connection id and rel
+	$(popupId).show();	//showing window
+	$('.overlay-popup').show();
+})
+$('.overlay-popup').click(function() {
+	$('.overlay-popup, .popup').hide(); //hiding window
+})
+
 
  //    //swipes
 	// $(".move-block").swipe( {

@@ -38,7 +38,8 @@ body{
 
 .fronton::after,
 .detile::after,
-.works-block::after{
+.works-block::after,
+.works-page::after{
 	display: block;
 	content: "";
 	position: absolute;
@@ -48,6 +49,10 @@ body{
 	left: 50%;
 	bottom: -28px;
 	z-index: 10;
+}
+
+.works-page::after{
+	bottom: -110px;
 }
 
 .logo{
@@ -905,16 +910,16 @@ body{
 }
 
 .about-social .social li{
-	margin-left: 10px;
+	margin-left: 5px;
 	float: left;
 }
 
 .about-social .social li:first-child{
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 .about-social .social li:nth-child(2){
-	margin-left: 17px;
+	margin-left: 14px;
 }
 
 .about-social .social .be{
@@ -993,16 +998,11 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
 /*works-page begins*/
+
+.works-page{
+	position: relative;
+}
 
 .works-page h2{
 	color: #fff;
@@ -1087,7 +1087,6 @@ body{
 
 .works-page .works-image{
 	width: 100%;
-	min-height: 500px;
 	margin-top: 20px;
 }
 
@@ -1125,13 +1124,85 @@ body{
 	display: none;
 }
 
+.works-page .works-image {
+	margin-bottom: 80px;
+}
 /*works-page ends*/
 
 
+/*go-top button styles*/
+
+#go-top{
+	display: none;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #070f1c;
+	background-image: url(img/svg/up.svg);
+	background-repeat: no-repeat;
+	position: fixed; 
+  	bottom: 100px; 
+  	right: 50px;
+  	cursor:pointer; 
+  	border-radius: 50%;
+  	opacity: 0.5;
+}
+
+#go-top::after{
+	display: block;
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 40px;
+	background-image: url(img/svg/Arrow-up.svg);
+	background-repeat: no-repeat;
+	bottom: -50px;
+	left: 18px;
+}
+
+#go-top:hover{
+	background-image: url(img/svg/up-hover.svg);
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease; 
+	opacity: 1;
+}
+/*end of go-top*/
 
 
 
+/*pop-up begins*/
+.all-page-wrapper .overlay-popup{
+	display: none;
+	position: fixed;
+	z-index: 50;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #0b111d;
+	opacity: 0.5;
+}
 
+.all-page-wrapper .popup{
+	display: none;
+	position: absolute;
+	top: 200px;
+	left: 65px;
+	right: 50px;
+	z-index: 70;
+	width: 90%;
+	border-radius: 4px;
+}
+
+/*#popup1{
+	display: block;
+	background-image: url(img/slider-works/crosslife-1040-544.jpg);
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	width: 100%;
+	z-index: 100;
+}
+*/
 
 
 
@@ -1190,6 +1261,10 @@ body{
 	.about-page .about-social{
 		bottom: -65px;
 		margin-left: -11px;
+	}
+
+	.about-page .about-text-wrapper br{
+		display: none;
 	}
 }
 
@@ -1357,7 +1432,8 @@ body{
 	.works-slider-wrapper .prev,
 	.works-slider-wrapper .next{
 	position: fixed;
-	top: 39%;
+	top: 35%;
+	padding: 150px 80px;
 }
 }
 
