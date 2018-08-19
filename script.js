@@ -1,4 +1,12 @@
-	var slideIndex = 1;
+var slideIndex;
+var urlParams = new URLSearchParams(window.location.search);
+
+if(urlParams.has('slide_id')){
+	slideIndex = urlParams.get('slide_id');
+} else {
+	slideIndex = 1;
+}
+
 	showSlides(slideIndex);
 	function plusSlides(n){
 		showSlides(slideIndex += n);
